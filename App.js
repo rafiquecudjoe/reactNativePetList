@@ -1,11 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View,TextInput } from 'react-native';
+import PetList from './petList';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View style={styles.sarea}>
+       
+      <TextInput style={styles.search} placeholder="Search Here"/>
+
+      </View>
+      
+
+      <PetList/>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,9 +22,19 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingVertical:50,
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#E6E6E6',
+ 
   },
+  search: {
+   backgroundColor: 'white',
+    marginHorizontal: 50,
+    height: 50,
+    borderRadius: 10,
+    alignItems: 'center',
+    paddingLeft:40
+
+  },
+  
 });
